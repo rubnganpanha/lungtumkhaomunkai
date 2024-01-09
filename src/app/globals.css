@@ -1,0 +1,87 @@
+/* @import url(https://db.onlinewebfonts.com/c/0da9b36b54c73aea1e7dbaff7b140acc?family=Sanomat+Grab+Web+Medium+Regular); */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.translateZ {
+  transform: translateZ(0px);
+}
+.about__content {
+  position: relative;
+  border: 1px solid #e4cdb4;
+  padding: 2rem 2rem 1rem !important;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.about__content:before {
+  left: -1.65rem;
+}
+.about__content:after {
+  right: -1.65rem;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.about__content:before,
+.about__content:after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+  margin: auto;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../../public/img/about/chicken_removebg.png);
+}
+
+@layer base {
+  body {
+    @apply bg-body font-secondary text-lg text-second-main font-medium;
+  }
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    @apply font-primary italic;
+  }
+  .h1 {
+    @apply text-6xl lg:text-8xl font-bold;
+  }
+  .h2 {
+    @apply font-black text-[46px] mb-4 leading-[1.1];
+  }
+  .h3 {
+    @apply font-extrabold italic text-[40px];
+  }
+  .h4 {
+    @apply font-extrabold italic text-[26px] text-white;
+  }
+  .h5 {
+    @apply font-medium text-[22px] text-white;
+  }
+  .a {
+    @apply text-second-main no-underline;
+  }
+  .pretitle {
+    @apply font-secondary font-bold text-base uppercase tracking-[-0.04em] text-second-main mb-2;
+  }
+  .btn {
+    @apply h-14 rounded-full bg-accent px-[42px] border border-second-main text-base font-secondary font-semibold tracking-[0.02em] outline-none hover:bg-accent-hover  hover:text-primary-main transition-all duration-300 flex justify-center items-center;
+  }
+  .input {
+    @apply h-[56px] w-[316px] outline-none pl-[30px] rounded-full border-2 border-gray-200 font-secondary font-semibold text-base text-dark  placeholder:text-dark;
+  }
+  .border-image {
+    border-style: solid;
+    border-image: url(../../public/img/body-bg-border.png) 30 30 round;
+    border-width: 2rem;
+  }
+}
