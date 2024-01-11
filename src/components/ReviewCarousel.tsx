@@ -17,7 +17,7 @@ import { EffectCards } from "swiper/modules";
 import { AiFillStar } from "react-icons/ai";
 
 import { Rating } from "../../public/assets/rate";
-const ReviewCarousel = ({ slider }) => {
+const ReviewCarousel = ({ slider }: any) => {
   return (
     <>
       <Swiper
@@ -79,7 +79,7 @@ const ReviewCarousel = ({ slider }) => {
             </div>
           </div>
         </SwiperSlide>
-        {slider.map((item, index) => {
+        {slider.map((item: any, index: any) => {
           // destructer item
           const { image, message, name, period, rating } = item;
           return (
