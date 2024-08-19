@@ -102,6 +102,14 @@ export const customerReviewData = {
   slider: [
     {
       message:
+        "ไก่ทอดอร่อยมากครับ",
+      image: Avatar19,
+      name: "suphakit",
+      period: "2 วันที่ผ่านมา",
+      rating: 5,
+    },
+    {
+      message:
         "ข้าวมันไก่อร่อยค่ะ ให้เยอะ สั่งเครื่องดื่มแยกถุงให้ อย่างดี ประทับใจค่ะ",
       image: Avatar19,
       name: "supap f.",
