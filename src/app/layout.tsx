@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -47,7 +48,6 @@ export const metadata: Metadata = {
     images: ["/img/hero/bg-lungtum4.png"],
   },
   // Schema.org for Google+
- 
 };
 
 export default function RootLayout({
@@ -57,7 +57,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
