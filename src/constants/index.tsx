@@ -18,10 +18,10 @@ import facebookLogo from "../../public/img/header/facebook.svg";
 import AboutImg from "../../public/img/about/store-front-removebg-2.png";
 import ModelWhiteImg from "../../public/img/model-white.png";
 import ModelBlackImg from "../../public/img/model-black.png";
-import MenuImg1 from "../../public/img/menu/1.jpg";
-import MenuImg2 from "../../public/img/menu/2.jpg";
-import MenuImg3 from "../../public/img/menu/3.jpg";
-import MenuImg4 from "../../public/img/menu/4.jpg";
+import MenuImg1 from "../../public/img/menu/1.webp";
+import MenuImg2 from "../../public/img/menu/2.webp";
+import MenuImg3 from "../../public/img/menu/3.webp";
+import MenuImg4 from "../../public/img/menu/4.webp";
 
 import Avatar1 from "../../public/img/reviews/avatar1.png";
 import Avatar2 from "../../public/img/reviews/avatar2.png";
