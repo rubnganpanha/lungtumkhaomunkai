@@ -1,6 +1,7 @@
 // import icons
 import { FaFacebookF } from "react-icons/fa";
 import { SiGrab } from "react-icons/si";
+import { SiTiktok } from "react-icons/si";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { AiFillHeart } from "react-icons/ai";
 import { FaRegGrinSquintTears } from "react-icons/fa";
@@ -417,11 +418,11 @@ export const socialData = [
     title: "ลุงตุ่มข้าวมันไก่ | Facebook",
     icon: <FaFacebookF />,
   },
-  // {
-  //   href: "https://food.grab.com/th/th/restaurant/%E0%B8%A5%E0%B8%B8%E0%B8%87%E0%B8%95%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%81%E0%B9%88-loong-toom-hainanese-chicken-rice-%E0%B8%96-%E0%B8%8A%E0%B8%B1%E0%B8%A2%E0%B8%9E%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5-chaiyaporn-vidhi-road-delivery/3-CZDTGBM2TETCNJ?",
-  //   title: "ลุงตุ่มข้าวมันไก่ | อร่อยยกนิ้ว | Grab-thumb-up",
-  //   icon: grabThumbUpLogo,
-  // },
+  {
+    href: "https://www.tiktok.com/@lungtorrono",
+    title: "ลุงตุ่มข้าวมันไก่ | Tiktok",
+    icon: <SiTiktok />,
+  },
   {
     href: "https://food.grab.com/th/th/restaurant/%E0%B8%A5%E0%B8%B8%E0%B8%87%E0%B8%95%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%81%E0%B9%88-loong-toom-hainanese-chicken-rice-%E0%B8%96-%E0%B8%8A%E0%B8%B1%E0%B8%A2%E0%B8%9E%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5-chaiyaporn-vidhi-road-delivery/3-CZDTGBM2TETCNJ?",
     title: "ลุงตุ่มข้าวมันไก่ | GrabFood",
