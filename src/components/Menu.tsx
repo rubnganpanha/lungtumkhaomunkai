@@ -101,11 +101,21 @@ const Menu = () => {
               })}
             </div>
           </div>
-          <button className="btn mx-auto capitalize mt-8">
+          {/* <button className="btn mx-auto capitalize mt-8">
             <Link href={btnURL} title={btnText} target="_blank">
               {btnText}
             </Link>
-          </button>
+          </button> */}
+          <Link href={btnURL} legacyBehavior passHref>
+            <a
+              className="btn py-3 px-6 m-2"
+              target="_blank"
+              rel="noopener noreferrer"
+              title={btnText}
+            >
+              {btnText}
+            </a>
+          </Link>
         </div>
       </motion.div>
     </section>

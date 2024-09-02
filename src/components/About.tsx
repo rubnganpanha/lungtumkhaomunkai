@@ -4,7 +4,9 @@ import React from "react";
 import { aboutData } from "@/constants";
 // import motion
 import { motion } from "framer-motion";
-// inport variants
+// import variants
+import { useRouter } from "next/navigation";
+
 import {
   plateVariants,
   staggerContainer,
@@ -22,6 +24,14 @@ const About = () => {
   // destructure data
   const { pretitle, title, btnText, AboutImg, btnURL } = aboutData;
 
+  const router = useRouter();
+
+  const handleClick = () => {
+    const menuSection = document.getElementById("menu");
+    if (menuSection) {
+      menuSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section id="about" className="min-h-[300px] border-image">
       <div className="container mx-auto min-h-[300px]">
@@ -53,11 +63,16 @@ const About = () => {
               ลูกค้าท่านใด สงสัยในความอร่อย ลองสั่งไปทานเลยค่ะ
               ที่ร้านเราบริการผ่าน เท่านั้นค่ะ
             </p>
-            <button className="btn capitalize mx-auto lg:mx-0">
-              <Link href={btnURL} title={btnText} target="_blank">
+            <Link href={btnURL} legacyBehavior passHref>
+              <a
+                className="btn py-3 px-6 m-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                title={btnText}
+              >
                 {btnText}
-              </Link>
-            </button>
+              </a>
+            </Link>
           </motion.div>
           {/* image */}
           <motion.div
