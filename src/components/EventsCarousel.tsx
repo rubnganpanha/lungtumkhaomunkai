@@ -39,27 +39,27 @@ export default function EventsCarousel() {
           return (
             <SwiperSlide
               key={index}
-              className="min-h-[700px] flex flex-col lg:flex-row items-center"
+              className="flex flex-col lg:flex-row items-center justify-center p-4"
             >
-              <div className="flex-auto w-full mx-4">
+              <div className="flex-auto w-full max-w-[600px] mx-auto mb-4">
                 <Image
                   src={image}
                   alt={alt}
-                  width={800} // กำหนดขนาดที่เหมาะสม
-                  height={450} // กำหนดขนาดที่เหมาะสม
+                  width={600} // ขนาดที่เหมาะสม
+                  height={337} // ขนาดที่เหมาะสม
                   sizes="100vw"
-                  style={{ width: "100%", height: "auto" }} // ปรับขนาดให้เหมาะสมกับความกว้างของคอมโพเนนต์
+                  style={{ width: "100%", height: "auto" }}
                 />
               </div>
-              <div className="text-white text-left lg:text-left flex-auto w-full mx-4">
+              <div className="text-white text-left lg:text-left flex-auto w-full max-w-[600px] mx-auto">
                 {/* location */}
-                <h3 className="text-second-main text-3xl pt-4 lg:pt-0">
+                <h3 className="text-second-main text-2xl lg:text-3xl pt-4 lg:pt-0">
                   <Link href={website} target="_blank" title={locationName}>
                     {locationName}
                   </Link>
                 </h3>
                 {/* amount */}
-                <div className="text-2xl mb-4">
+                <div className="text-xl mb-4">
                   <p className="mt-4">
                     <span className="border-b-2 border-solid border-iconh-main">
                       {amount}
@@ -67,7 +67,7 @@ export default function EventsCarousel() {
                   </p>
                 </div>
                 {/* description */}
-                <div className="mb-4 text-xl font-normal whitespace-pre-line align-bottom">
+                <div className="mb-4 text-lg font-normal whitespace-pre-line align-bottom">
                   {desc}
                 </div>
               </div>
