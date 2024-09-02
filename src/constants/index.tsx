@@ -45,10 +45,10 @@ import Avatar19 from "../../public/img/reviews/avatar19.png";
 import Avatar21 from "../../public/img/reviews/avatar21.png";
 import Avatar22 from "../../public/img/reviews/avatar22.png";
 
-import eventBantanHospital from "../../public/img/events/event-bantan-hospital.png";
-import eventTummasartHotel from "../../public/img/events/event-tummasart-hotel.png";
-import eventSiamCountryClubRollingHall from "../../public/img/events/event-siam-country-club-rolling-hall.png";
-import eventSiamCountryClubWaterside from "../../public/img/events/Siam Country Club Waterside.jpg";
+import eventBantanHospital from "../../public/img/events/event-bantan-hospital.webp";
+import eventTummasartHotel from "../../public/img/events/event-tummasart-hotel.webp";
+import eventSiamCountryClubRollingHall from "../../public/img/events/event-siam-country-club-rolling-hall.webp";
+import eventSiamCountryClubWaterside from "../../public/img/events/Siam Country Club Waterside.webp";
 
 export const eventData = {
   title: "การจัดส่งนอกสถานที่",
