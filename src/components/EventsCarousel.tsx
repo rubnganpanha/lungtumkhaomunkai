@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -19,6 +19,7 @@ import Link from "next/link";
 
 export default function EventsCarousel() {
   const { title, subtitle, slider } = eventData;
+
   return (
     <>
       <Swiper
@@ -30,10 +31,11 @@ export default function EventsCarousel() {
           hide: true,
         }}
         modules={[Autoplay, Scrollbar]}
-        className="mySwiper-events lg:max-w-[1800px] h-[700px]  mx-auto px-24"
+        className="mySwiper-events lg:max-w-[1800px] h-[700px] mx-auto px-24"
       >
         {slider.map((item, index) => {
-          const { locationName, image, amount, desc, website, alt, title } = item;
+          const { locationName, image, amount, desc, website, alt, title } =
+            item;
           return (
             <SwiperSlide
               key={index}
@@ -42,11 +44,11 @@ export default function EventsCarousel() {
               <div className="flex-auto w-full mx-4">
                 <Image
                   src={image}
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  title={title}
                   alt={alt}
+                  width={800} // กำหนดขนาดที่เหมาะสม
+                  height={450} // กำหนดขนาดที่เหมาะสม
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }} // ปรับขนาดให้เหมาะสมกับความกว้างของคอมโพเนนต์
                 />
               </div>
               <div className="text-white text-left lg:text-left flex-auto w-full mx-4">
@@ -65,7 +67,7 @@ export default function EventsCarousel() {
                   </p>
                 </div>
                 {/* description */}
-                <div className="mb-4 text-xl font-normal whitespace-pre-line align-bottom	">
+                <div className="mb-4 text-xl font-normal whitespace-pre-line align-bottom">
                   {desc}
                 </div>
               </div>
