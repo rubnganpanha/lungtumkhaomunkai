@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState } from "react";
 import { navData } from "@/constants";
 import Link from "next/link";
 import Socials from "./Socials";
-import { motion } from "framer-motion";
 
 export default function Nav() {
   const [nav, setNav] = useState(false);
@@ -15,15 +13,17 @@ export default function Nav() {
     }
     setNav(!nav);
   };
+
   return (
-    <nav className="w-full h-full">
+    <nav className="w-full h-full" aria-label="Main navigation">
       <ul className="h-full flex flex-col lg:flex-row justify-center items-center gap-y-6 lg:gap-x-32">
         {navData.map((item, index) => (
           <li key={index}>
             <a
               onClick={() => handleNavClick(item.href.substring(1))}
-              className="text-xl capitalize font-primary 
-              hover:text-navPanelTextHover transition-all duration-300 cursor-pointer"
+              className="text-xl capitalize font-primary hover:text-navPanelTextHover transition-all duration-300 cursor-pointer"
+              href={item.href}
+              aria-label={`Navigate to ${item.name}`}
             >
               {item.name}
             </a>
@@ -33,24 +33,26 @@ export default function Nav() {
           <div className="flex justify-center items-center mb-1">
             <Socials />
           </div>
-          <div className="flex justify-center items-center mb-1">
+          <address className="flex justify-center items-center mb-1 not-italic">
             <a
               href="https://maps.app.goo.gl/bC4VJznsajYpM4T48"
               className="no-underline hover:text-iconh-main"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View location on Google Maps"
             >
               23/69 3240, พัทยา, ประเทศไทย, ชลบุรี
             </a>
-          </div>
+          </address>
           <div className="flex justify-center items-center uppercase mb-4">
             <a
-              href="https://github.com/56023613"
+              href="https://www.facebook.com/LungtumKhaomunkai/"
               className="no-underline table-cell py-1 hover:text-iconh-main"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit ลุงตุ่มข้าวมันไก่"
             >
-              powered by 56023613
+              powered by ลุงตุ่มข้าวมันไก่
             </a>
           </div>
         </li>
