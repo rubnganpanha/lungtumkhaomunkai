@@ -21,6 +21,7 @@ export const Video = () => {
             src="https://www.youtube.com/embed/K68PzkNA1jg?si=XjRyLIPU-aOk2rfw"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            loading="lazy"
           ></iframe>
         </div>
       </motion.div>
