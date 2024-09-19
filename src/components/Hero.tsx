@@ -1,15 +1,28 @@
 "use client";
 import React from "react";
-
+import { useRouter } from "next/navigation";
 import { heroData } from "@/constants";
 import Header from "./Header";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../public/assets/variants";
 import Link from "next/link";
+
 function Hero() {
   const { pretitle, title, subtitle, btnText } = heroData;
+
+  const router = useRouter();
+
+  const handleClick = () => {
+    const menuSection = document.getElementById("menu");
+    if (menuSection) {
+      menuSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <section className="min-h-[700px] lg:bg-hero lg:bg-cover lg:bg-right ">
+    <section
+      id="hero"
+      className="min-h-[700px] lg:bg-hero lg:bg-cover lg:bg-right "
+    >
       <Header />
 
       <div className="container mx-auto min-h-[700px] flex justify-center items-center ">
@@ -32,8 +45,8 @@ function Hero() {
             {subtitle}
           </motion.p>
           <motion.div variants={fadeIn("down", "tweem", 1.8, 0.5)}>
-            <button className="btn">
-              <Link href="#menu">{btnText}</Link>
+            <button className="btn" onClick={handleClick}>
+              {btnText}
             </button>
           </motion.div>
         </motion.div>

@@ -74,7 +74,7 @@
     @apply font-secondary font-bold text-base uppercase tracking-[-0.04em] text-second-main mb-2;
   }
   .btn {
-    @apply h-14 rounded-full bg-accent px-[42px] border border-second-main text-base font-secondary font-semibold tracking-[0.02em] outline-none hover:bg-accent-hover  hover:text-primary-main transition-all duration-300 flex justify-center items-center;
+    @apply h-14 rounded-full bg-accent px-[42px] border border-second-main text-base font-secondary font-semibold tracking-[0.02em] outline-none hover:bg-accent-hover  hover:text-primary-main transition-all duration-300 inline-block text-center cursor-pointer;
   }
   .input {
     @apply h-[56px] w-[316px] outline-none pl-[30px] rounded-full border-2 border-gray-200 font-secondary font-semibold text-base text-dark  placeholder:text-dark;

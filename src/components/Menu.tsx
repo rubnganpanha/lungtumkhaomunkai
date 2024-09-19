@@ -1,18 +1,19 @@
 "use client";
 import React from "react";
-
 import { menuData } from "@/constants";
 import Image from "next/image";
-// import motion
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../public/assets/variants";
 import Link from "next/link";
+
 const Menu = () => {
   const { title, subtitle, modelImg, menuItems, btnText, btnURL } = menuData;
+
   return (
     <section id="menu" className="min-h-[780px]">
       {/* background */}
       <div className="h-[780px] bg-menu lg:bg-cover lg:bg-right absolute w-full max-w-[1800px] -z-0"></div>
+
       {/* text */}
       <div className="relative z-10 top-52 lg:top-52">
         <motion.div
@@ -35,23 +36,24 @@ const Menu = () => {
             {subtitle}
           </motion.p>
           <motion.div variants={fadeIn("down", "tween", 0.6, 1.6)}>
-            <Image src={modelImg} alt="" width={150} height={27} />
+            <Image
+              src={modelImg}
+              alt="Model Image"
+              width={600} // กำหนดขนาดที่เหมาะสม
+              height={300} // กำหนดขนาดที่เหมาะสม
+              layout="responsive"
+            />
           </motion.div>
         </motion.div>
       </div>
+
       {/* menu gallery */}
       <motion.div
-        initial={{
-          opacity: 0,
-          y: 150,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
+        initial={{ opacity: 0, y: 150 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          typ: "tween",
-          deplay: 0.2,
+          type: "tween",
+          delay: 0.2,
           duration: 1.6,
           ease: "easeOut",
         }}
@@ -61,9 +63,8 @@ const Menu = () => {
           <div className="lg:mt-24 min-h-[500px] z-30 ">
             {/* grid */}
             <div className="grid grid-cols-1 lg:grid-cols-4 min-h-[500px]">
-              {menuItems.map((items, index) => {
-                // destructure item
-                const { image, image_alt, name, price, description } = items;
+              {menuItems.map((item, index) => {
+                const { image, image_alt, name, price, description } = item;
                 return (
                   <div key={index}>
                     <div className="flex flex-row lg:flex-col h-full">
@@ -78,9 +79,9 @@ const Menu = () => {
                         <Image
                           src={image}
                           alt={image_alt}
-                          width={0}
-                          height={0}
-                          className="h-full"
+                          width={300} // กำหนดขนาดที่เหมาะสม
+                          height={300} // กำหนดขนาดที่เหมาะสม
+                          layout="responsive"
                         />
                       </div>
                       {/* text */}
@@ -101,11 +102,16 @@ const Menu = () => {
               })}
             </div>
           </div>
-          <button className="btn mx-auto capitalize mt-8">
-            <Link href={btnURL} title={btnText} target="_blank">
+          <Link href={btnURL} legacyBehavior passHref>
+            <a
+              className="btn py-3 px-6 m-2"
+              target="_blank"
+              rel="noopener noreferrer"
+              title={btnText}
+            >
               {btnText}
-            </Link>
-          </button>
+            </a>
+          </Link>
         </div>
       </motion.div>
     </section>

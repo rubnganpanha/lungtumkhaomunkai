@@ -60,7 +60,7 @@ const config: Config = {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         pattern: "url('/img/body-bg-border.png')",
         hero: "url('/img/hero/bg-lungtum4.png')",
-        menu: "url('/img/menu/bg3.jpg')"
+        menu: "url('/img/menu/bg3.webp')"
 
       },
 

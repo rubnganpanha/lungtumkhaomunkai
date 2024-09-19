@@ -74,7 +74,7 @@ const ReviewCarousel = ({ slider }: any) => {
                   <AiFillStar />
                   <AiFillStar />
                 </div>
-                <p>(1275)</p>
+                <p>(2009)</p>
               </div>
             </div>
           </div>

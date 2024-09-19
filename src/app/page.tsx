@@ -5,7 +5,7 @@ import About from "@/components/About";
 import Menu from "@/components/Menu";
 import Review from "@/components/Review";
 import Footer from "@/components/Footer";
-import { Video } from "@/components/Video";
+import Video from "@/components/Video";
 import Events from "@/components/Events";
 
 export default function Home() {
