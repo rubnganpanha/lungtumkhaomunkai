@@ -84,4 +84,20 @@
     border-image: url(../../public/img/body-bg-border.png) 30 30 round;
     border-width: 2rem;
   }
+
+  .dark\:bg-blacksection:is(.dark *) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(28 33 54 / var(--tw-bg-opacity));
+  }
+
+  .shadow-solid-8 {
+    --tw-shadow: 0px 12px 120px rgba(45, 74, 170, 0.06);
+    --tw-shadow-colored: 0px 12px 120px var(--tw-shadow-color);
+  }
+
+  .shadow-solid-8,
+  .shadow-solid-9 {
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
 }
