@@ -1,6 +1,10 @@
 import { getBlogBySlug, getBlogPosts } from "@/lib/blogs";
 import { notFound } from "next/navigation";
 
+import BlogContent from "@/components/BlogContent";
+import NavBlog from "@/components/NavBlog";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 // กำหนด type สำหรับ params
 interface Params {
   params: {
@@ -30,6 +34,7 @@ export async function generateMetadata({ params }: Params) {
   return {
     title: post.title,
     description: post.excerpt,
+    keywords: post.keywords,
   };
 }
 
@@ -42,9 +47,17 @@ export default async function BlogDetail({ params }: Params) {
   }
 
   return (
-    <div>
-      <h1>{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
-    </div>
+    <>
+      <NavBlog />
+      <section className="pb-20 pt-36 lg:pb-24 lg:pt-48 xl:pb-32 xl:pt-52">
+        <BlogContent data={post} />
+      </section>
+      {/* <div>
+        <h1>{post.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+      </div> */}
+      <Footer />
+      <ScrollToTop />
+    </>
   );
 }

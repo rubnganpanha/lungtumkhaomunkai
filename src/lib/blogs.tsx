@@ -23,9 +23,10 @@ export const getBlogPosts = async () => {
     const { data, content } = matter(fileContents);
 
     return {
-      title: data.title || filename.replace(".md", ""),
-      slug: filename.replace(".md", ""),
+      title: data.title || filename.replace(".mdx", ""),
+      slug: filename.replace(".mdx", ""),
       excerpt: data.excerpt || "",
+      keywords: data.keywords || "",
       image: data.image || "",
       alt: data.alt || "",
       width: data.width || 0,
@@ -40,7 +41,7 @@ export const getBlogPosts = async () => {
 export const getBlogBySlug = async (slug: string) => {
   // แปลง slug เป็น URL-decoded
   const decodedSlug = decodeURI(slug);
-  const filePath = path.join(process.cwd(), `content/blogs/${decodedSlug}.md`);
+  const filePath = path.join(process.cwd(), `content/blogs/${decodedSlug}.mdx`);
 
   console.log("filePath:", filePath);
   // ตรวจสอบว่ามีไฟล์หรือไม่
@@ -55,5 +56,12 @@ export const getBlogBySlug = async (slug: string) => {
     title: data.title || slug,
     contentHtml: content,
     excerpt: data.excerpt || "",
+    keywords: data.keywords || "",
+    image: data.image || "",
+    alt: data.alt || "",
+    width: data.width || 0,
+    height: data.height || 0,
+    date: data.date || "",
+    author: data.author || "",
   };
 };

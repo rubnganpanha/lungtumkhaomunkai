@@ -48,6 +48,10 @@ export const metadata: Metadata = {
     images: ["/img/hero/bg-lungtum4.png"],
   },
   // Schema.org for Google+
+  robots: {
+    index: true, // อนุญาตให้ค้นหา
+    follow: true, // อนุญาตให้ติดตามลิงก์
+  },
 };
 
 export default function RootLayout({
