@@ -7,6 +7,9 @@ import Review from "@/components/Review";
 import Footer from "@/components/Footer";
 // import Video from "@/components/Video";
 import Events from "@/components/Events";
+import Blog from "@/components/Blog";
+import BlogList from "@/components/BlogList";
+import BlogSlide from "@/components/BlogSlide";
 
 export default function Home() {
   return (
@@ -18,6 +21,7 @@ export default function Home() {
         <Menu />
         <Review />
         <Events/>
+        <BlogSlide />
         {/* <Video/> */}
         <Footer />
         <div className="h-[380px] md:h-[370px]"></div>
