@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Params) {
     title: post.title,
     description: post.excerpt,
     keywords: post.keywords,
-    image: post.image,
+    images: post.image,
   };
 }
 
