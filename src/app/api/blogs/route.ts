@@ -18,8 +18,8 @@ export async function GET() {
         const { data } = matter(fileContents);
 
         return {
-            title: data.title || filename.replace(".md", ""),
-            slug: filename.replace(".md", ""),
+            title: data.title || filename.replace(".mdx", ""),
+            slug: filename.replace(".mdx", ""),
             excerpt: data.excerpt || "",
             image: data.image || "",
             alt: data.alt || "",

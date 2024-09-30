@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import NavBlog from "@/components/NavBlog";
 import Blog from "@/components/Blog";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const generateMetadata = () => {
   return {
@@ -29,6 +30,11 @@ export const generateMetadata = () => {
       ],
       type: "website",
     },
+    // เพิ่ม robots tag ที่นี่
+    robots: {
+      index: true,  // อนุญาตให้ค้นหา
+      follow: true, // อนุญาตให้ติดตามลิงก์
+    },
   };
 };
 
@@ -38,6 +44,7 @@ export default function BlogList() {
       <NavBlog />
       <Blog />
       <Footer />
+      <ScrollToTop />
     </>
   );
 }
