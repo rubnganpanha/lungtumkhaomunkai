@@ -22,7 +22,7 @@ export const generateMetadata = () => {
       url: "https://lungtum-khaomunkai.vercel.app/blog",
       images: [
         {
-          url: "/img/hero/bg-lungtum4.png",
+          url: "/img/hero/ข้าวมันไก่.jpg",
           width: 1034,
           height: 563,
           alt: "บทความทั้งหมด - ลุงตุ่มข้าวมันไก่",
