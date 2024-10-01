@@ -1,3 +1,5 @@
+import React from "react";
+
 import { getBlogBySlug, getBlogPosts } from "@/lib/blogs";
 import { notFound } from "next/navigation";
 

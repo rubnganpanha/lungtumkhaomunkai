@@ -1,3 +1,5 @@
+import React from "react";
+
 import Footer from "@/components/Footer";
 import NavBlog from "@/components/NavBlog";
 import Blog from "@/components/Blog";
