@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     siteName: "ร้านอาหารใกล้ฉัน ข้าวมันไก่ ข้าวมันไก่พัทยา ร้านอาหาร",
     images: [
       {
-        url: "/img/hero/bg-lungtum4.png",
-        width: 1034,
-        height: 563,
+        url: "/img/hero/ข้าวมันไก่.jpg",
+        width: 1200,
+        height: 630,
         alt: "ร้านอาหารใกล้ฉัน ข้าวมันไก่ ข้าวมันไก่พัทยา ร้านอาหาร",
       },
     ],
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description:
       "ข้าวมันไก่ ขายดีสุดในหนองปรือ ข้าวหอมนุ่มมันร้อนๆกำลังดี ตัวเนื้อไก่เพียงแค่กัดก็รับรู้ได้ถึงความฉ่ำน้ำ น้ำจิ้มรสเด็ด ที่ไม่มีใครเหมือน รับประกันความอร่อย",
     creator: "@lungtum-khao-man-gai",
-    images: ["/img/hero/bg-lungtum4.png"],
+    images: ["/img/hero/ข้าวมันไก่.jpg"],
   },
   // Schema.org for Google+
   robots: {
