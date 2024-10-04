@@ -24,56 +24,53 @@ export default function EventsCarousel() {
     <>
       <Swiper
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         scrollbar={{
           hide: true,
         }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+        }}
         modules={[Autoplay, Scrollbar]}
-        className="mySwiper-events lg:max-w-[1800px] h-[700px] mx-auto px-24"
+        className="mySwiper-events lg:max-w-[1800px] h-[700px] mx-auto px-4 lg:px-24"
       >
-        {slider.map((item, index) => {
-          const { locationName, image, amount, desc, website, alt, title } =
-            item;
-          return (
-            <SwiperSlide
-              key={index}
-              className="flex flex-col lg:flex-row items-center justify-center p-4"
-            >
-              <div className="flex-auto w-full max-w-[600px] mx-auto mb-4">
-                <Image
-                  src={image}
-                  alt={alt}
-                  width={600} // ขนาดที่เหมาะสม
-                  height={337} // ขนาดที่เหมาะสม
-                  sizes="100vw"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </div>
-              <div className="text-white text-left lg:text-left flex-auto w-full max-w-[600px] mx-auto">
-                {/* location */}
-                <h3 className="text-second-main text-2xl lg:text-3xl pt-4 lg:pt-0">
-                  <Link href={website} target="_blank" title={locationName}>
-                    {locationName}
-                  </Link>
-                </h3>
-                {/* amount */}
-                <div className="text-xl mb-4">
-                  <p className="mt-4">
-                    <span className="border-b-2 border-solid border-iconh-main">
-                      {amount}
-                    </span>
-                  </p>
-                </div>
-                {/* description */}
-                <div className="mb-4 text-lg font-normal whitespace-pre-line align-bottom">
-                  {desc}
-                </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
+        {slider.map((item, index) => (
+          <SwiperSlide
+            key={index}
+            className="flex flex-col lg:flex-row items-center justify-center p-4"
+          >
+            {/* Image Section */}
+            <div className="w-full lg:w-1/2 h-[300px] lg:h-[500px] relative">
+              <Image
+                src={item.image}
+                alt={item.alt}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+
+            {/* Content Section */}
+            <div className="text-white text-center lg:text-left w-full lg:w-1/2 mt-4 lg:mt-0 lg:pl-8">
+              <h3 className="text-second-main text-2xl lg:text-3xl mb-4">
+                <Link href={item.website} target="_blank">
+                  {item.locationName}
+                </Link>
+              </h3>
+              <p className="text-xl mb-2">{item.amount}</p>
+              <p className="text-lg whitespace-pre-line">{item.desc}</p>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

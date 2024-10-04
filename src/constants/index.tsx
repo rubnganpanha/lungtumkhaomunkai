@@ -22,6 +22,21 @@ import MenuImg1 from "../../public/img/menu/1.webp";
 import MenuImg2 from "../../public/img/menu/2.webp";
 import MenuImg3 from "../../public/img/menu/3.webp";
 import MenuImg4 from "../../public/img/menu/4.webp";
+import MenuImg5 from "../../public/img/menu/categories/Beverages/menu_item_beverages01.webp";
+import MenuImg6 from "../../public/img/menu/categories/Beverages/menu_item_beverages02.webp";
+import MenuImg7 from "../../public/img/menu/categories/Beverages/menu_item_beverages03.webp";
+import MenuImg8 from "../../public/img/menu/categories/Beverages/menu_item_beverages04.webp";
+import MenuImg9 from "../../public/img/menu/categories/Beverages/menu_item_beverages05.webp";
+import MenuImg10 from "../../public/img/menu/categories/Beverages/menu_item_beverages06.webp";
+import MenuImg11 from "../../public/img/menu/categories/Beverages/menu_item_beverages07.webp";
+import MenuImg12 from "../../public/img/menu/categories/HerbalJuice/menu01.webp";
+import MenuImg13 from "../../public/img/menu/categories/HerbalJuice/menu02.webp";
+import MenuImg14 from "../../public/img/menu/categories/HerbalJuice/menu03.webp";
+import MenuImg15 from "../../public/img/menu/categories/HerbalJuice/menu04.webp";
+import MenuImg16 from "../../public/img/menu/categories/dessert/menu01.webp";
+import MenuImg17 from "../../public/img/menu/categories/dessert/menu02.webp";
+import MenuImg18 from "../../public/img/menu/categories/dessert/menu03.webp";
+import MenuImg19 from "../../public/img/menu/categories/dessert/menu04.webp";
 
 import Avatar1 from "../../public/img/reviews/avatar1.png";
 import Avatar2 from "../../public/img/reviews/avatar2.png";
@@ -49,6 +64,7 @@ import eventBantanHospital from "../../public/img/events/event-bantan-hospital.w
 import eventTummasartHotel from "../../public/img/events/event-tummasart-hotel.webp";
 import eventSiamCountryClubRollingHall from "../../public/img/events/event-siam-country-club-rolling-hall.webp";
 import eventSiamCountryClubWaterside from "../../public/img/events/Siam Country Club Waterside.webp";
+import eventTummasartUniverst from "../../public/img/events/event-tummasart-universt.webp";
 
 export const eventData = {
   title: "การจัดส่งนอกสถานที่",
@@ -94,6 +110,16 @@ export const eventData = {
         "สั่งอาหาร ข้าวกล่อง อาหารกล่อง ลุงตุ่มข้าวมันไก่ - ข้าวมันไก่ Siam Country Club Waterside",
       amount: "120 กล่อง",
       desc: "ขอบพระคุณ  Siam Country Club Waterside มากๆนะคะ สำหรับข้าวมันไก่ผสม120กล่อง ขอบพระคุณที่เปิดโอกาสเเละให้โอกาสให้ลุงตุ่มได้ให้บริการนะคะ🙏🏻💕",
+    },
+    {
+      locationName: "มหาวิทยาลัยธรรมศาสตร์ ศูนย์พัทยา",
+      website: "https://pattayacenter.tu.ac.th/",
+      image: eventTummasartUniverst,
+      alt: "สั่งอาหาร ข้าวกล่อง อาหารกล่อง ลุงตุ่มข้าวมันไก่ - ข้าวมันไก่ Tummasart Universt",
+      title:
+        "สั่งอาหาร ข้าวกล่อง อาหารกล่อง ลุงตุ่มข้าวมันไก่ - ข้าวมันไก่ Tummasart Universt",
+      amount: "180 กล่อง",
+      desc: "วันนี้ลุงตุ่มข้าวมันไก่(สาขาหนองปรือ-สาขาโป่ง) ขอขอบพระคุณออเดอร์จากมหาวิทยาลัยธรรมศาสตร์ ศูนย์พัทยา คุณภาพคับกล่องทุกกล่องแน่นอนค่ะ ขอบพระคุณAnchalee Skyด้วยนะคะ ที่ไว้ใจให้ลุงตุ่มข้าวมันไก่ดูแลอาหารกลางวันของนักศึกษา",
     },
   ],
 };
@@ -353,46 +379,202 @@ export const menuData = {
   btnURL:
     "https://food.grab.com/th/th/restaurant/%E0%B8%A5%E0%B8%B8%E0%B8%87%E0%B8%95%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%81%E0%B9%88-loong-toom-hainanese-chicken-rice-%E0%B8%96-%E0%B8%8A%E0%B8%B1%E0%B8%A2%E0%B8%9E%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5-chaiyaporn-vidhi-road-delivery/3-CZDTGBM2TETCNJ?",
 
+  // New Menu Categories Data
+  categories: ["เมนูข้าว", "เครื่องดื่ม", "น้ำสมุนไพร", "ของหวาน"],
+
   menuItems: [
     {
       image: MenuImg1,
       image_alt:
-        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road) : ข้าวมันไก่ต้ม",
-      image_title:
-        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road) : ข้าวมันไก่ต้ม",
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : ข้าวมันไก่ต้ม",
+      image_title: "ข้าวมันไก่ต้ม",
       name: "ข้าวมันไก่ต้ม",
       price: "฿ 50",
       description: "ข้าวนุ่มๆ ไก่ต้มแน่นๆ ซดน้ำซุปร้อนๆ",
+      category: "เมนูข้าว",
     },
     {
       image: MenuImg2,
       name: "ข้าวมันไก่ทอด",
       image_alt:
-        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road) : ข้าวมันไก่ทอด",
-      image_title:
-        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road) : ข้าวมันไก่ทอด",
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : ข้าวมันไก่ทอด",
+      image_title: "ข้าวมันไก่ทอด",
       price: "฿ 50",
       description: "ข้าวนุ่มๆ ไก่ทอดแน่นๆ ซดน้ำซุปร้อนๆ",
+      category: "เมนูข้าว",
     },
     {
       image: MenuImg3,
       name: "ข้าวมันไก่ผสม",
       image_alt:
-        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road) : ข้าวมันไก่ผสม",
-      image_title:
-        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road) : ข้าวมันไก่ผสม",
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : ข้าวมันไก่ผสม",
+      image_title: "ข้าวมันไก่ผสม",
       price: "฿ 50",
       description: "ข้าวนุ่มๆ ไก่ต้มแน่นๆ+ไก่ทอดแน่นๆ",
+      category: "เมนูข้าว",
     },
     {
       image: MenuImg4,
       name: "ไก่สับล้วน",
       image_alt:
-        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road) : ไก่สับล้วน",
-      image_title:
-        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road) : ไก่สับล้วน",
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : ไก่สับล้วน",
+      image_title: "ไก่สับล้วน",
       price: "฿ 80",
       description: "ไก่สับล้วน",
+      category: "Side Dishes",
+    },
+    {
+      image: MenuImg5,
+      name: "เป๊ปซี่ ",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : เป๊ปซี่",
+      image_title: "เป๊ปซี่",
+      price: "฿ 23",
+      description: "อิเล็คทริค กลิ่นซิตรัส 345 ml.",
+      category: "เครื่องดื่ม",
+    },
+    {
+      image: MenuImg6,
+      name: "มิรินด้าน้ำแดง",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : มิรินด้าน้ำแดง",
+      image_title: "มิรินด้าน้ำแดง",
+      price: "฿ 23",
+      description: "มิรินด้าน้ำแดง",
+      category: "เครื่องดื่ม",
+    },
+    {
+      image: MenuImg7,
+      name: "เป๊ปซี่ 545ml.",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : เป๊ปซี่ 545ml.",
+      image_title: "เป๊ปซี่ 545ml.",
+      price: "฿ 35",
+      description: "เป๊ปซี่ 545ml.",
+      category: "เครื่องดื่ม",
+    },
+    {
+      image: MenuImg8,
+      name: "มิรินด้าน้ำส้ม",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : มิรินด้าน้ำส้ม",
+      image_title: "มิรินด้าน้ำส้ม",
+      price: "฿ 23",
+      description: "มิรินด้าน้ำส้ม",
+      category: "เครื่องดื่ม",
+    },
+    {
+      image: MenuImg9,
+      name: "น้ำโค้ก 500ml.",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : น้ำโค้ก 500ml.",
+      image_title: "น้ำโค้ก",
+      price: "฿ 27",
+      description: "น้ำโค้ก 500ml.",
+      category: "เครื่องดื่ม",
+    },
+    {
+      image: MenuImg10,
+      name: "น้ำดื่มอควาฟิน่า",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : น้ำดื่มอควาฟิน่า",
+      image_title: "น้ำดื่มอควาฟิน่า",
+      price: "฿ 15",
+      description: "น้ำดื่มอควาฟิน่า",
+      category: "เครื่องดื่ม",
+    },
+    {
+      image: MenuImg11,
+      name: "มิรินด้าน้ำเขียว",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : มิรินด้าน้ำเขียว",
+      image_title: "มิรินด้าน้ำเขียว",
+      price: "฿ 23",
+      description: "มิรินด้าน้ำเขียว",
+      category: "เครื่องดื่ม",
+    },
+    {
+      image: MenuImg12,
+      name: "น้ำเก็กฮวย",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : น้ำเก็กฮวย",
+      image_title: "น้ำเก็กฮวย",
+      price: "฿ 35",
+      description: "น้ำเก็กฮวย",
+      category: "น้ำสมุนไพร",
+    },
+    {
+      image: MenuImg13,
+      name: "น้ำแดงแมงลัก",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : น้ำแดงแมงลัก",
+      image_title: "น้ำแดงแมงลัก",
+      price: "฿ 35",
+      description: "น้ำแดงแมงลัก",
+      category: "น้ำสมุนไพร",
+    },
+    {
+      image: MenuImg14,
+      name: "น้ำอัญชันมะนาว",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : น้ำอัญชันมะนาว",
+      image_title: "น้ำอัญชันมะนาว",
+      price: "฿ 35",
+      description: "น้ำอัญชันมะนาว",
+      category: "น้ำสมุนไพร",
+    },
+    {
+      image: MenuImg15,
+      name: "น้ำพั้นซ์",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : น้ำพั้นซ์",
+      image_title: "น้ำพั้นซ์",
+      price: "฿ 40",
+      description: "น้ำพั้นซ์",
+      category: "น้ำสมุนไพร",
+    },
+    {
+      image: MenuImg16,
+      name: "เค้กชาไทย",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : เค้กชาไทย",
+      image_title: "เค้กชาไทย",
+      price: "฿ 30",
+      description: "หอมนุ่มละมุนลิ้นละล๊ายในปาก by Nara bakery & coffee",
+      category: "ของหวาน",
+    },
+    {
+      image: MenuImg17,
+      name: "เค้กมะพร้าว",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : เค้กมะพร้าว",
+      image_title: "เค้กมะพร้าว",
+      price: "฿ 30",
+      description:
+        "ได้รสสัมผัสเนื้อมะพร้าว นุ่มนิ่มละลายในปาก by Nara bakery & coffee",
+      category: "ของหวาน",
+    },
+
+    {
+      image: MenuImg18,
+      name: "เค้กช็อกโกเเลต",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : เค้กช็อกโกเเลต",
+      image_title: "เค้กช็อกโกเเลต",
+      price: "฿ 30",
+      description:
+        "หน้านิ๊มนิ่มละลายฟินแทบไม่ต้องเคี้ยว  by Nara bakery & coffee",
+      category: "ของหวาน",
+    },
+    {
+      image: MenuImg19,
+      name: "เค้กส้ม",
+      image_alt:
+        "ลุงตุ่มข้าวมันไก่ (Loong Toom Hainanese chicken rice) - ถ.ชัยพรวิธี (Chaiyaporn Vidhi Road)  : เค้กส้ม",
+      image_title: "เค้กส้ม",
+      price: "฿ 30",
+      description: "หอมส้ม นุ่มนิ่มละลายในปาก by Nara bakery & coffee",
+      category: "ของหวาน",
     },
   ],
 };

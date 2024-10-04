@@ -1,7 +1,11 @@
+/* CSS ใหม่สำหรับ Section Reviews */
 #reviews {
+  /* สไตล์สำหรับ container ของ Swiper */
   .mySwiper-review .swiper {
-    /* width: 550px;
-    height: 300px; */
+    width: 100%; /* ปรับความกว้างเป็น 100% */
+    max-width: 600px; /* กำหนดความกว้างสูงสุด */
+    height: auto; /* ปรับความสูงให้อัตโนมัติ */
+    margin: 0 auto; /* จัดให้ Swiper อยู่ตรงกลาง */
   }
 
   .mySwiper-review .swiper-slide {
@@ -9,12 +13,47 @@
     align-items: center;
     justify-content: center;
     border-radius: 18px;
-    font-size: 22px;
+    font-size: 18px; /* ปรับขนาดตัวอักษร */
     font-weight: bold;
-    color: #fff;
+    color: #333; /* เปลี่ยนสีตัวอักษร */
+    padding: 20px; /* เพิ่ม padding ในแต่ละ slide */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ slide */
+    transition: transform 0.3s ease-in-out; /* เพิ่ม effect การขยาย */
   }
 
+  /* สไลด์แต่ละรายการ: เปลี่ยนสีพื้นหลัง */
   .mySwiper-review .swiper-slide:nth-child(1n) {
-    background-color: white;
+    background-color: #f7f7f7;
+  }
+
+  /* สไลด์เมื่อถูก hover */
+  .mySwiper-review .swiper-slide:hover {
+    transform: scale(1.05); /* ขยายเมื่อ hover */
+  }
+
+  /* เพิ่ม Media Queries สำหรับการแสดงผลแบบ responsive */
+  @media (max-width: 768px) {
+    .mySwiper-review .swiper {
+      width: 100%; /* ปรับความกว้างให้เต็มเมื่อหน้าจอเล็ก */
+      height: auto; /* ให้ความสูงปรับตามเนื้อหา */
+    }
+
+    .mySwiper-review .swiper-slide {
+      font-size: 16px; /* ลดขนาดตัวอักษร */
+      padding: 15px; /* ลด padding */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .mySwiper-review .swiper {
+      height: auto; /* ปรับความสูงให้อัตโนมัติ */
+      padding: 10px; /* เพิ่ม padding ของ swiper */
+    }
+
+    .mySwiper-review .swiper-slide {
+      font-size: 14px; /* ลดขนาดตัวอักษรอีก */
+      padding: 10px; /* ลด padding ของ slide */
+    }
   }
 }

@@ -1,119 +1,79 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { menuData } from "@/constants";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../../public/assets/variants";
 import Link from "next/link";
 
 const Menu = () => {
-  const { title, subtitle, modelImg, menuItems, btnText, btnURL } = menuData;
+  const { categories, menuItems } = menuData;
+  const [activeTab, setActiveTab] = useState(categories[0]);
+
+  // Filter items based on active tab
+  const filteredItems = menuItems.filter((item) => item.category === activeTab);
 
   return (
-    <section id="menu" className="min-h-[780px]">
-      {/* background */}
-      <div className="h-[780px] bg-menu lg:bg-cover lg:bg-right absolute w-full max-w-[1800px] -z-0"></div>
+    <section
+      id="menu"
+      className="border-image relative top-[340px] lg:top-[250px] z-10 h-auto pt-[60px] md:pt-[120px] pb-16"
+    >
+      <div className="container mx-auto px-4 md:px-0">
+        {/* Tab List */}
+        <div className="flex justify-center mb-8 flex-wrap">
+          {categories.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-4 py-2 mx-2 text-lg font-semibold border-b-2 ${
+                activeTab === tab
+                  ? "border-navPanelTextHover navPanelTextHover"
+                  : "border-transparent navPanelTextHover"
+              } transition-all duration-300`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
 
-      {/* text */}
-      <div className="relative z-10 top-52 lg:top-52">
+        {/* Menu Items Grid */}
         <motion.div
-          variants={staggerContainer(0, 0)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.1 }}
-          className="container mx-auto flex flex-col items-center text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          <motion.h2
-            variants={fadeIn("down", "tween", 0.2, 1.6)}
-            className="h2 capitalize max-w-[400px] text-center"
-          >
-            {title}
-          </motion.h2>
-          <motion.p
-            variants={fadeIn("down", "tween", 0.4, 1.6)}
-            className="capitalize mb-8"
-          >
-            {subtitle}
-          </motion.p>
-          <motion.div variants={fadeIn("down", "tween", 0.6, 1.6)}>
-            <Image
-              src={modelImg}
-              alt="Model Image"
-              width={600} // กำหนดขนาดที่เหมาะสม
-              height={300} // กำหนดขนาดที่เหมาะสม
-              layout="responsive"
-            />
-          </motion.div>
+          {filteredItems.map((item, index) => (
+            <motion.div
+              key={index}
+              className="border-primary-main rounded-lg overflow-hidden shadow-md bg-primary-main"
+              whileHover={{ scale: 1.05, rotate: 1 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+            >
+              {/* Image Section */}
+              <div className="relative h-48 md:h-56 lg:h-64">
+                <Image
+                  src={item.image}
+                  alt={item.image_alt}
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full"
+                />
+              </div>
+              {/* Product Info */}
+              <div className="p-4">
+                <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
+                <p className="text-lg font-bold mb-4">{item.price}</p>
+                <p className="text-sm navPanelTextHover mb-4">
+                  {item.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
-
-      {/* menu gallery */}
-      <motion.div
-        initial={{ opacity: 0, y: 150 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          type: "tween",
-          delay: 0.2,
-          duration: 1.6,
-          ease: "easeOut",
-        }}
-        className="relative top-80 lg:top-44"
-      >
-        <div className="container mx-auto">
-          <div className="lg:mt-24 min-h-[500px] z-30 ">
-            {/* grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-4 min-h-[500px]">
-              {menuItems.map((item, index) => {
-                const { image, image_alt, name, price, description } = item;
-                return (
-                  <div key={index}>
-                    <div className="flex flex-row lg:flex-col h-full">
-                      {/* image */}
-                      <div
-                        className={`w-[45%] md:w-auto ${
-                          index === 1 || index === 3
-                            ? "lg:order-1"
-                            : "order-none"
-                        }`}
-                      >
-                        <Image
-                          src={image}
-                          alt={image_alt}
-                          width={300} // กำหนดขนาดที่เหมาะสม
-                          height={300} // กำหนดขนาดที่เหมาะสม
-                          layout="responsive"
-                        />
-                      </div>
-                      {/* text */}
-                      <div className="bg-second-main flex-1 flex flex-col justify-center px-6 lg:p-12 lg:max-h-[225px] ">
-                        <div className="text-center">
-                          <div className="text-xl font-semibold text-accent xl:text-2xl">
-                            {name}
-                          </div>
-                          <div className="my-1 text-[20px] lg:text-[40px] lg:my-6 text-orange-main font-semibold">
-                            {price}
-                          </div>
-                          <div className="text-accent">{description}</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <Link href={btnURL} legacyBehavior passHref>
-            <a
-              className="btn py-3 px-6 m-2"
-              target="_blank"
-              rel="noopener noreferrer"
-              title={btnText}
-            >
-              {btnText}
-            </a>
-          </Link>
-        </div>
-      </motion.div>
     </section>
   );
 };

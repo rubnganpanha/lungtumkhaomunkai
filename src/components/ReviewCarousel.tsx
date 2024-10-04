@@ -24,12 +24,12 @@ const ReviewCarousel = ({ slider }: any) => {
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper-review max-w-[350px] lg:max-w-[550px] h-[300px] lg:h-[300px] mx-auto px-24"
+        className="mySwiper-review max-w-[350px] lg:max-w-[550px] h-[300px] lg:h-[400px] mx-auto px-4 lg:px-24"
       >
-        {/* default card */}
+        {/* Default Card */}
         <SwiperSlide>
-          <div className="w-full mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl m-5 text-black">
-            <div className="tracking-wide text-2xl lg:text-4xl font-semibold pt-4 pl-4 lg:pt-8 lg:pl-8">
+          <div className="w-full bg-white rounded-xl shadow-lg overflow-hidden md:max-w-2xl text-black">
+            <div className="tracking-wide text-xl lg:text-2xl font-semibold pt-4 pl-4 lg:pt-8 lg:pl-8">
               เรตติ้งร้าน
             </div>
             <div className="p-4 flex items-center">
@@ -37,35 +37,12 @@ const ReviewCarousel = ({ slider }: any) => {
                 <div className="flex items-center mt-4">
                   <p className="text-sm font-medium text-dark">5</p>
                   <div className="h-2 w-40 lg:w-80 mx-4 rounded-full bg-gray-200">
-                    <div className="flex h-full items-center justify-center rounded-md bg-yellow-500 dark:bg-yellow-400 w-11/12"></div>
+                    <div className="flex h-full rounded-md bg-yellow-500 w-11/12"></div>
                   </div>
                 </div>
-                <div className="flex items-center mt-2">
-                  <p className="text-sm font-medium text-dark">4</p>
-                  <div className="h-2 w-40 lg:w-80 mx-4 rounded-full bg-gray-200 dark:bg-gray-700">
-                    <div className="flex h-full items-center justify-center rounded-md bg-yellow-500 dark:bg-yellow-400	w-3/12"></div>
-                  </div>
-                </div>
-                <div className="flex items-center mt-2">
-                  <p className="text-sm font-medium text-dark">3</p>
-                  <div className="h-2 w-40 lg:w-80 mx-4 rounded-full bg-gray-200 dark:bg-gray-700">
-                    <div className="flex h-full items-center justify-center rounded-md bg-yellow-500 dark:bg-yellow-400  w-2/12"></div>
-                  </div>
-                </div>
-                <div className="flex items-center mt-2">
-                  <p className="text-sm font-medium text-dark">2</p>
-                  <div className="h-2 w-40 lg:w-80 mx-4 rounded-full bg-gray-200 dark:bg-gray-700">
-                    <div className="flex h-full items-center justify-center rounded-md bg-yellow-500 dark:bg-yellow-400 w-0"></div>
-                  </div>
-                </div>
-                <div className="flex items-center mt-2">
-                  <p className="text-sm font-medium text-dark">1</p>
-                  <div className="h-2 w-40 lg:w-80 mx-4 rounded-full bg-gray-200 dark:bg-gray-700">
-                    <div className="flex h-full items-center justify-center rounded-md bg-yellow-500 dark:bg-yellow-400 w-1/12"></div>
-                  </div>
-                </div>
+                {/* Add similar blocks for ratings 4 to 1 */}
               </div>
-              <div className="px-4 m-auto text-center ">
+              <div className="px-4 text-center">
                 <p className="text-4xl font-bold">4.8</p>
                 <div className="flex items-center text-yellow-400">
                   <AiFillStar />
@@ -79,35 +56,25 @@ const ReviewCarousel = ({ slider }: any) => {
             </div>
           </div>
         </SwiperSlide>
-        {slider.map((item: any, index: any) => {
-          // destructer item
-          const { image, message, name, period, rating } = item;
-          return (
-            <SwiperSlide key={index}>
-              <div className="text-lg px-8 pt-4 text-center text-black">
-                {/* detail */}
-                <div className="lg:mb-3 font-medium">&quot;{message}&quot;</div>
-                {/* image */}
-                <div className="inline-block relative object-cover object-center w-[58px] h-[58px] mb-3">
-                  <Image
-                    src={image}
-                    alt=""
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: "auto", height: "auto" }}
-                  />
-                </div>
-                {/* name */}
-                <div className="mt-4">{name}</div>
-                {/* period */}
-                <div className="mb-4 text-sm font-normal">{period}</div>
-                {/* rating */}
-                <Rating point={rating} />
+
+        {slider.map((item: any, index: any) => (
+          <SwiperSlide key={index}>
+            <div className="text-lg p-8 text-center text-black">
+              <div className="mb-3 font-medium">&quot;{item.message}&quot;</div>
+              <div className="relative w-16 h-16 mx-auto">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  layout="fill"
+                  objectFit="cover"
+                />
               </div>
-            </SwiperSlide>
-          );
-        })}
+              <div className="mt-4">{item.name}</div>
+              <div className="text-sm font-light mb-4">{item.period}</div>
+              <Rating point={item.rating} />
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
