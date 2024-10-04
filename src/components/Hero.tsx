@@ -33,19 +33,22 @@ function Hero() {
           className="text-center flex flex-col items-center"
         >
           <motion.h1
-            variants={fadeIn("down", "tweem", 0.3, 1.1)}
-            className="h1 text-5xl lg:h1 mb-5 mt-32 lg:mt-5"
+            variants={fadeIn("down", "tween", 0.3, 1.1)}
+            className="h1 text-5xl lg:text-6xl mb-5 mt-32 lg:mt-5 font-bold "
           >
             {title}
           </motion.h1>
           <motion.p
-            variants={fadeIn("down", "tweem", 0.4, 1.1)}
-            className="max-w-[540px] mb-8"
+            variants={fadeIn("down", "tween", 0.4, 1.1)}
+            className="max-w-[540px] text-lg lg:text-xl mb-8 "
           >
             {subtitle}
           </motion.p>
-          <motion.div variants={fadeIn("down", "tweem", 1.8, 0.5)}>
-            <button className="btn" onClick={handleClick}>
+          <motion.div variants={fadeIn("down", "tween", 1.8, 0.5)}>
+            <button
+              className="btn bg-primary  py-3 px-6 rounded-lg shadow-lg hover:bg-primary-dark transition-all duration-300"
+              onClick={handleClick}
+            >
               {btnText}
             </button>
           </motion.div>
