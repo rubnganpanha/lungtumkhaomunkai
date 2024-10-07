@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 
 import { Inter } from "next/font/google";
@@ -85,7 +84,6 @@ export default function RootLayout({
       </head>
       <body>
         {children}
-        <SpeedInsights />
       </body>
     </html>
   );
