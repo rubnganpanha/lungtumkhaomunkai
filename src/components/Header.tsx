@@ -155,9 +155,8 @@ const Header = () => {
               <Image
                 src={LogoRestaurant}
                 alt={"ลุงตุ่มข้าวมันไก่ - พัทยา"}
-                width={0}
-                height={0}
-                sizes="100vw"
+                width={90} 
+                height={90}
                 priority
                 className={`${
                   IsActive ? "w-[90px] h-[90px]" : "w-[107px] h-[107px]"
