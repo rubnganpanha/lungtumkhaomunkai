@@ -69,7 +69,7 @@ export default function RootLayout({
           name="google-site-verification"
           content="v5jRJPB1JpGIqovsXWTUiq3XamNiML3ARbzJ6TO9RTs"
         />
-        <Script
+        {/* <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-8NDJT6CZE5"
           strategy="afterInteractive"
         />
@@ -80,11 +80,13 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-8NDJT6CZE5');
           `}
-        </Script>
+        </Script> */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtm.js?id=G-8NDJT6CZE5"
+        ></script>
       </head>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
