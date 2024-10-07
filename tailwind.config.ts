@@ -10,8 +10,8 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      primary: 'Manrope',
-      secondary: ["Manrope", "sans-serif"],
+      primary: 'Helvetica',
+      secondary: ["Helvetica", "sans-serif"],
     },
     container: {
       padding: {
