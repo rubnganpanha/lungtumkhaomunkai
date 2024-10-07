@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Nav from "./Nav";
 import Socials from "./Socials";
-import LogoRestaurant from "../../public/img/header/Logo-2-removebg.png";
+import LogoRestaurant from "../../public/img/header/Logo-2-removebg.webp";
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "../../public/assets/variants";
 import Image from "next/image";
@@ -155,9 +155,9 @@ const Header = () => {
               <Image
                 src={LogoRestaurant}
                 alt={"ลุงตุ่มข้าวมันไก่ - พัทยา"}
-                width={0}
-                height={0}
-                sizes="100vw"
+                width={90} 
+                height={90}
+                priority
                 className={`${
                   IsActive ? "w-[90px] h-[90px]" : "w-[107px] h-[107px]"
                 }`}
