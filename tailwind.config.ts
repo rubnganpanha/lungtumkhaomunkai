@@ -10,8 +10,8 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      primary: 'Manrope',
-      secondary: ["Manrope", "sans-serif"],
+      primary: 'Helvetica',
+      secondary: ["Helvetica", "sans-serif"],
     },
     container: {
       padding: {
@@ -61,7 +61,7 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         pattern: "url('/img/body-bg-border.png')",
-        hero: "url('/img/hero/bg-lungtum4.png')",
+        hero: "url('/img/hero/bg-lungtum4.webp')",
         menu: "url('/img/menu/bg3.webp')"
 
       },

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -49,8 +50,8 @@ export const metadata: Metadata = {
   },
   // Schema.org for Google+
   robots: {
-    index: true, // อนุญาตให้ค้นหา
-    follow: true, // อนุญาตให้ติดตามลิงก์
+    index: true,
+    follow: true,
   },
 };
 
@@ -61,6 +62,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* เพิ่ม Google Site Verification */}
+        <meta
+          name="google-site-verification"
+          content="v5jRJPB1JpGIqovsXWTUiq3XamNiML3ARbzJ6TO9RTs"
+        />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-8NDJT6CZE5"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8NDJT6CZE5');
+          `}
+        </Script>
+      </head>
       <body>
         {children}
         <SpeedInsights />
