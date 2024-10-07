@@ -21,7 +21,7 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-[700px] bg-image-placeholder lg:bg-hero lg:bg-cover lg:bg-right "
+      className="min-h-[700px]  lg:bg-hero lg:bg-cover lg:bg-right "
     >
       <Header />
 
