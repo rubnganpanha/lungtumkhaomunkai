@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 
 import { Inter } from "next/font/google";
@@ -63,6 +62,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preload" href="/img/hero/bg-lungtum4.webp" as="image" />
+
         {/* เพิ่ม Google Site Verification */}
         <meta
           name="google-site-verification"
@@ -83,7 +84,6 @@ export default function RootLayout({
       </head>
       <body>
         {children}
-        <SpeedInsights />
       </body>
     </html>
   );

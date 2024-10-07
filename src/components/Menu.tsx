@@ -4,9 +4,11 @@ import { menuData } from "@/constants";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { fadeIn, staggerContainer } from "../../public/assets/variants";
 
 const Menu = () => {
-  const { categories, menuItems } = menuData;
+  const { categories, menuItems, title, subtitle, modelImg, btnText, btnURL } =
+    menuData;
   const [activeTab, setActiveTab] = useState(categories[0]);
 
   // Filter items based on active tab
@@ -15,9 +17,33 @@ const Menu = () => {
   return (
     <section
       id="menu"
-      className="border-image relative top-[340px] lg:top-[250px] z-10 h-auto pt-[60px] md:pt-[120px] pb-16"
+      className="border-image relative top-[340px] lg:top-[250px] z-10 h-auto  pb-16"
     >
       <div className="container mx-auto px-4 md:px-0">
+        {/* text */}
+        <div className="relative top-0 z-10 h-auto pt-16 md:pt-20 lg:pt-28 pb-16">
+          <motion.div
+            variants={staggerContainer(0, 0)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.1 }}
+            className="flex flex-col items-center text-center mb-12"
+          >
+            <motion.h2
+              variants={fadeIn("down", "tween", 0.2, 1.6)}
+              className="text-3xl md:text-4xl font-bold mb-4"
+            >
+              {title}
+            </motion.h2>
+            <motion.p
+              variants={fadeIn("down", "tween", 0.4, 1.6)}
+              className="text-base md:text-lg mb-8"
+            >
+              {subtitle}
+            </motion.p>
+          </motion.div>
+        </div>
+
         {/* Tab List */}
         <div className="flex justify-center mb-8 flex-wrap">
           {categories.map((tab) => (
@@ -73,6 +99,20 @@ const Menu = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Button Section */}
+        <div className="mt-8 text-center">
+          <Link href={btnURL} legacyBehavior>
+            <a
+              className="inline-block bg-primary-main  py-3 px-6 rounded-full shadow-lg transition-transform duration-300 hover:bg-primary-hover hover:scale-105"
+              target="_blank"
+              rel="noopener noreferrer"
+              title={btnText}
+            >
+              {btnText}
+            </a>
+          </Link>
+        </div>
       </div>
     </section>
   );

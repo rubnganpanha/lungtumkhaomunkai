@@ -49,8 +49,7 @@
     url("/fonts/Helvetica-BoldOblique.woff2") format("woff2"),
     url("/fonts/Helvetica-BoldOblique.woff") format("woff"),
     url("/fonts/Helvetica-BoldOblique.ttf") format("truetype"),
-    url("/fonts/Helvetica-BoldOblique.svg#Helvetica-BoldOblique")
-      format("svg");
+    url("/fonts/Helvetica-BoldOblique.svg#Helvetica-BoldOblique") format("svg");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -455,5 +454,22 @@
 @media (max-width: 768px) {
   .h1 {
     font-size: 2.5rem;
+  }
+}
+
+.bg-image-placeholder {
+  background-color: #f0f0f0; /* Placeholder color */
+  min-height: 700px; /* Set a height for the placeholder */
+}
+
+@media (max-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: 1fr; /* ปรับให้มี 1 คอลัมน์บนหน้าจอมือถือ */
+  }
+}
+
+@media (min-width: 1024px) {
+  .max-w-lg {
+    max-width: 50%; /* ลดขนาด content สำหรับ desktop */
   }
 }
