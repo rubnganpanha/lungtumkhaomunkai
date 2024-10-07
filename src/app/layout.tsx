@@ -63,6 +63,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preload" href="/img/hero/bg-lungtum4.webp" as="image" />
+
         {/* เพิ่ม Google Site Verification */}
         <meta
           name="google-site-verification"
